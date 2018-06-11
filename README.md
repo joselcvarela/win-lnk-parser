@@ -12,14 +12,16 @@ $ cscript /?
 ``` js
 const lnkParser = require('win-lnk-parser')
 const fullPath = "c:\\...\\...\\example.lnk"
-const {
-    targetPath
-    windowStyle
-    hotKey
-    iconLocation
-    description
-    workingDirectory
-} = lnkParser(fullPath, [codePage=850])
+const go = async () => {
+    const {
+        targetPath
+        windowStyle
+        hotKey
+        iconLocation
+        description
+        workingDirectory
+    } = await lnkParser(fullPath, [codePage=850])
+}
 ```
  - fullPath - absolute path to .lnk file
  - codePage - defaults to 850 (see [here](https://en.wikipedia.org/wiki/Code_page) for more information)
