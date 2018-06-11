@@ -9,6 +9,10 @@ $ cscript /?
 ```
 
 ## Usage
+```sh
+$ npm i --save win-lnk-parser
+```
+
 ``` js
 const lnkParser = require('win-lnk-parser')
 const fullPath = "c:\\...\\...\\example.lnk"
