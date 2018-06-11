@@ -1,0 +1,32 @@
+{
+    "name": "win-lnk-parser",
+    "version": "1.0.0",
+    "description": "A vbs solution based to parse lnk files (windows shortcuts) supporting special chars",
+    "main": "lnkParser.js",
+    "dependencies": {
+        "iconv-lite": "^0.4.23"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/joselcvarela/win-lnk-parser.git"
+    },
+    "keywords": [
+        "lnk",
+        "parser",
+        "windows",
+        "shortcut",
+        "link",
+        "shell",
+        "microsoft"
+    ],
+    "author": "José Varela",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/joselcvarela/win-lnk-parser/issues"
+    },
+    "homepage": "https://github.com/joselcvarela/win-lnk-parser#readme"
+}
