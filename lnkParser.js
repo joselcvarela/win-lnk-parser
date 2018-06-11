@@ -4,7 +4,8 @@ const { exec } = require('child_process')
 const execAsync = util.promisify(exec)
 
 module.exports = async (fullPath, codePage = 850) => {
-    const resultBuffer = await execAsync(`chcp ${codePage} | cscript.exe /NoLogo lnkParser.wsf ${fullPath}`, {
+    const vbScript = __dirname + '\\lnkParser.wsf'
+    const resultBuffer = await execAsync(`chcp ${codePage} | cscript.exe /NoLogo ${vbScript} ${fullPath}`, {
         encoding: 'buffer'
     })
     if (resultBuffer.err) throw Error(err)
