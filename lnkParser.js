@@ -5,7 +5,7 @@ const execAsync = util.promisify(exec)
 
 module.exports = async (fullPath, codePage = 850) => {
     const vbScript = __dirname + '\\lnkParser.wsf'
-    const resultBuffer = await execAsync(`chcp ${codePage} | cscript.exe /NoLogo ${vbScript} ${fullPath}`, {
+    const resultBuffer = await execAsync(`chcp ${codePage} | cscript.exe /NoLogo ${vbScript} "${fullPath}"`, {
         encoding: 'buffer'
     })
     if (resultBuffer.err) throw Error(err)
